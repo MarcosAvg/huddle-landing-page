@@ -1,0 +1,168 @@
+/*  variables  */
+:root {
+    --violet: #674bb1;
+    --white: #fff;
+    --pink: #e980e7;
+
+    --principalFont: "Open Sans", sans-serif;
+}
+
+/*  globals  */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 10px */
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+body {
+    font-family: var(--principalFont);
+    background-color: var(--violet);
+    background-image: url(images/bg-mobile.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.container {
+    margin: auto;
+    padding: 3rem;
+}
+
+
+/*  header  */
+.header__title {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 5rem;
+}
+
+/*  main  */
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between ;
+    align-items: center;
+    gap: 3rem;
+    height: max-content;
+}
+
+.info__image {
+    width: 100%;
+}
+
+.info__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info__title {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 3.2rem;
+    text-align: center;
+    
+}
+
+.info__text {
+    color: var(--white);
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.info__register {
+    border: none;
+    color: var(--violet);
+    font-weight: 700;
+    border-radius: 5rem;
+    padding: 1.2rem 8rem;
+    margin-top: 2rem;
+    align-self: center;
+}
+
+.info__register:hover {
+    background-color: var(--pink);
+    color: var(--white);
+}
+
+/*  footer  */
+
+.footer {
+    margin-top: 5rem;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.social__link {
+    border: solid var(--white) .1rem;
+    border-radius: 5rem;
+    box-sizing: content-box;
+    padding: 1rem;
+}
+
+.social__link:hover {
+    
+}
+
+/* -----------mediaQuery's--------- */
+
+@media (min-width: 900px) {
+    body {
+        background-size: cover;
+    }
+
+    .header__title {
+        height: 7rem;
+        margin-bottom: 5rem;
+    }
+
+    .container {
+        margin: 10rem;
+    }
+
+    .info {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .info__image {
+        width: 50%;
+    }
+
+    .info__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50%;
+    }
+
+    .info__title {
+        text-align: left;
+        font-size: 5.2rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    .info__text {
+        text-align: left;
+        font-size: 2.4rem;
+    }
+
+    .info__register {
+        align-self: flex-start;
+        font-weight: 400;
+        font-size: 2.4rem;
+        padding: 1.8rem 8rem;
+    }
+
+    .social {
+        justify-content: end;
+    }
+}
